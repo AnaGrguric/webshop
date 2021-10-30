@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { CartProvider } from "react-use-cart";
+import { useState } from "react/cjs/react.development";
+import "./App.css";
+import Checkout from "./components/Checkout";
+import { Route, Link } from "react-router-dom";
+import Home from "./components/Home";
+import Data from "./Data.js";
 
 function App() {
+  const [enteredData, setEnteredData] = useState([]);
+  const saveInfoInputs = (enteredInfo) => {
+    setEnteredData([enteredInfo]);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2 className="header">Webshop</h2>
+      <CartProvider>
+        <Route exact path="/">
+          <Home data={Data} />
+        </Route>
+        <Route exact path="/checkout">
+          <Checkout userData={enteredData} info={saveInfoInputs} />
+        </Route>
+      </CartProvider>
     </div>
   );
 }

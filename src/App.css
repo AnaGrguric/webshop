@@ -1,38 +1,200 @@
-.App {
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #efefef;
+}
+
+.header {
+  margin: 40px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.row {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.item-card {
+  background-color: #fff;
+  padding: 24px;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
+}
+
+.item-info {
   align-items: center;
+  display: flex;
+  gap: 16px;
+  padding: 16px 0px;
+}
+
+.item-img {
+  width: 200px;
+  height: auto;
+}
+
+/* Cart */
+
+.cart {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 40px 0px 40px;
+  margin-top: 40px;
+  height: 400px;
+  max-height: 440px;
+}
+
+table {
+  margin: 16px 0px;
+}
+
+.img-small {
+  width: auto;
+  height: 40px;
+}
+
+tr:nth-child(odd) {
+  background-color: #efefef;
+}
+
+tr:nth-child(even) {
+  background-color: #fff;
+}
+
+tr {
+  height: 40px;
+  text-align: center;
+}
+
+td.quantity {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  vertical-align: middle;
+  margin-top: 8px;
+  gap: 8px;
 }
 
-.App-link {
-  color: #61dafb;
+button.btn-quantity {
+  background-color: transparent;
+  height: 24px;
+  width: 24px;
+  padding: 4px;
+  justify-content: center;
+  border-radius: 24px;
+  border: 1px solid gray;
+  color: rgb(68, 68, 228);
+  font-size: 16px;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.minus {
+  position: relative;
+  bottom: 3px;
+}
+
+.btn-position {
+  position: absolute;
+  right: 0px;
+  margin: 64px 40px;
+}
+.total-price {
+  text-align: right;
+  margin: 24px 40px;
+  position: absolute;
+  right: 0px;
+}
+
+.form,
+.final-items {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 600px;
+  padding: 40px;
+  margin-bottom: 40px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 14px;
+  margin: 8px 0px;
+}
+
+input {
+  height: 24px;
+  padding: 8px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn {
+  height: 24px;
+  width: 100px;
+  border: 0px;
+}
+
+.btn-primary {
+  background-color: rgb(68, 68, 228);
+  color: #fff;
+  font-weight: bold;
+}
+
+.btn-secondary {
+  background-color: #efefef;
+  color: #333;
+  margin-right: 16px;
+}
+
+.btn-submit {
+  margin-top: 40px;
+  position: relative;
+  right: 0px;
+  margin-left: auto;
+}
+
+.info {
+  border-top: 2px solid #efefef;
+  padding-top: 16px;
+}
+
+.popup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #fff;
+  border: 1px solid #efefef;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, 50%);
+}
+
+a.black {
+  color: #333;
+}
+
+.right {
+  margin-left: auto;
+}
+
+.total {
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.empty-state {
+  margin-top: 100px;
 }
