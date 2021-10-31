@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import { useCart } from "react-use-cart";
 import Delete from "../icons/delete.svg";
+import Coupon from "./Coupon.js";
+import { useState } from "react";
 
-function Cart() {
+function Cart(props) {
   const {
     isEmpty,
     totalUniqueItems,
@@ -74,9 +76,16 @@ function Cart() {
         <tfoot>
           <tr>
             <td>
-              <h3 className="total-price">
-                Total price: {cartTotal.toFixed(2)} EUR
-              </h3>
+              <h3 className="total-price">Price: {cartTotal.toFixed(2)} EUR</h3>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <Coupon
+                totalPrice={cartTotal.toFixed(2)}
+                apply={props.apply}
+                discount={props.discount}
+              />
             </td>
           </tr>
           <tr>

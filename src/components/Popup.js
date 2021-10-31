@@ -12,7 +12,7 @@ function Popup() {
       <h4>Order recived</h4>
       <p>Your order is recived we will inform you about shipping</p>
       <button className="btn btn-primary" onClick={clear}>
-        <Link to="/" >Close</Link>
+        <Link to="/webshop" >Close</Link>
       </button>
     </div>
   );

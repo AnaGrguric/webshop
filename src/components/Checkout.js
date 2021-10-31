@@ -3,12 +3,11 @@ import Info from "./Info";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Popup from "./Popup";
-
+import DisplayDiscount from "./DisplayDiscount";
 
 function Checkout(props) {
-
-    const [openPopup, setOpenPopup] = useState(false);
-    const { items, cartTotal } = useCart();
+  const [openPopup, setOpenPopup] = useState(false);
+  const { items, cartTotal } = useCart();
 
   return (
     <div>
@@ -29,7 +28,8 @@ function Checkout(props) {
             })}
           </tbody>
         </table>
-        <p className="right total">Total price: {cartTotal.toFixed(2)} EUR</p>
+        <p className="right total">Price: {cartTotal.toFixed(2)} EUR</p>
+        <DisplayDiscount discount={props.couponData.discount} totalPrice={cartTotal} />
         {props.userData.map((item, index) => {
           return (
             <div className="info" key={index}>
@@ -41,7 +41,9 @@ function Checkout(props) {
         })}
         <div className="right">
           <button className="btn btn-secondary">
-            <Link to="/webshop" className="black">Back to cart</Link>
+            <Link to="/webshop" className="black">
+              Back to cart
+            </Link>
           </button>
           <button
             className="btn btn-primary btn-submit"
@@ -53,7 +55,7 @@ function Checkout(props) {
           </button>
         </div>
       </div>
-      { openPopup && <Popup />}
+      {openPopup && <Popup />}
     </div>
   );
 }

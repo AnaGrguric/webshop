@@ -102,7 +102,7 @@ button.btn-quantity {
 .btn-position {
   position: absolute;
   right: 0px;
-  margin: 24px 40px;
+  margin: 40px 40px;
 }
 .total-price {
   text-align: right;
@@ -166,6 +166,7 @@ a {
 .info {
   border-top: 2px solid #efefef;
   padding-top: 16px;
+  margin-top: 24px;
 }
 
 .popup {
@@ -191,9 +192,34 @@ a.black {
 
 .total {
   font-weight: bold;
-  margin-bottom: 24px;
+  margin-bottom: 8px;
 }
 
 .empty-state {
   margin-top: 100px;
+}
+
+.coupon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 16px;
+  position: absolute;
+  right: 40px;
+}
+
+#coupon-input {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.discount-display {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+p.discount {
+  color: red;
 }

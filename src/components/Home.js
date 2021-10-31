@@ -16,7 +16,7 @@ function Home(props) {
           );
         })}
       </div>
-      <Cart />
+      <Cart newPrice={props.newPrice} discount={props.discount} apply={props.apply}/>
     </div>
     )
 }
