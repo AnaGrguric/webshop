@@ -18,9 +18,9 @@ function Checkout(props) {
         <p>Please check all information</p>
         <table>
           <tbody>
-            {items.map((item) => {
+            {items.map((item, index) => {
               return (
-                <tr className="">
+                <tr className="" key={index}>
                   <td>{item.name}</td>
                   <td>{item.quantity}</td>
                   <td>{item.price} EUR</td>
@@ -41,7 +41,7 @@ function Checkout(props) {
         })}
         <div className="right">
           <button className="btn btn-secondary">
-            <Link to="/" className="black">Back to cart</Link>
+            <Link to="/webshop" className="black">Back to cart</Link>
           </button>
           <button
             className="btn btn-primary btn-submit"

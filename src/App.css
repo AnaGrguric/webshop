@@ -45,10 +45,9 @@ body {
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  padding: 40px 40px 0px 40px;
+  padding: 40px;
   margin-top: 40px;
-  height: 400px;
-  max-height: 440px;
+  bottom: 0px;
 }
 
 table {
@@ -60,11 +59,11 @@ table {
   height: 40px;
 }
 
-tr:nth-child(odd) {
+tbody tr:nth-child(odd) {
   background-color: #efefef;
 }
 
-tr:nth-child(even) {
+tbody tr:nth-child(even) {
   background-color: #fff;
 }
 
@@ -103,11 +102,11 @@ button.btn-quantity {
 .btn-position {
   position: absolute;
   right: 0px;
-  margin: 64px 40px;
+  margin: 24px 40px;
 }
 .total-price {
   text-align: right;
-  margin: 24px 40px;
+  margin: 0px 40px;
   position: absolute;
   right: 0px;
 }

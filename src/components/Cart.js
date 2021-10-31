@@ -27,7 +27,11 @@ function Cart() {
             return (
               <tr key={item.id}>
                 <td>
-                  <img alt={item.name} src={item.img} className="img-small"></img>
+                  <img
+                    alt={item.name}
+                    src={window.location + item.img}
+                    className="img-small"
+                  ></img>
                 </td>
                 <td>
                   <h5>{item.name}</h5>
@@ -68,24 +72,28 @@ function Cart() {
           })}
         </tbody>
         <tfoot>
-          <td>
-            <h3 className="total-price">
-              Total price: {cartTotal.toFixed(2)} EUR
-            </h3>
-          </td>
-          <td className="btn-position">
-            <button
-              className="btn btn-secondary"
-              onClick={() => {
-                emptyCart();
-              }}
-            >
-              Clear cart
-            </button>
-            <button className="btn btn-primary">
-              <Link to="/checkout">Check out</Link>
-            </button>
-          </td>
+          <tr>
+            <td>
+              <h3 className="total-price">
+                Total price: {cartTotal.toFixed(2)} EUR
+              </h3>
+            </td>
+          </tr>
+          <tr>
+            <td className="btn-position">
+              <button
+                className="btn btn-secondary"
+                onClick={() => {
+                  emptyCart();
+                }}
+              >
+                Clear cart
+              </button>
+              <button className="btn btn-primary">
+                <Link to="/checkout">Check out</Link>
+              </button>
+            </td>
+          </tr>
         </tfoot>
       </table>
     </div>

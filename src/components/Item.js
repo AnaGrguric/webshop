@@ -5,7 +5,7 @@ function Item(props) {
 
   return (
     <div className="item-card">
-      <img alt="img" src={props.img} className="item-img"></img>
+      <img alt="img" src={window.location + props.img} className="item-img"></img>
       <div>
         <div className="item-info">
           <h5>{props.name}</h5>

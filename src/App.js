@@ -2,7 +2,7 @@ import { CartProvider } from "react-use-cart";
 import { useState } from "react/cjs/react.development";
 import "./App.css";
 import Checkout from "./components/Checkout";
-import { Route, Link } from "react-router-dom";
+import { Route } from "react-router-dom";
 import Home from "./components/Home";
 import Data from "./Data.js";
 
@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <h2 className="header">Webshop</h2>
       <CartProvider>
-        <Route exact path="/">
+        <Route exact path="/webshop">
           <Home data={Data} />
         </Route>
         <Route exact path="/checkout">
