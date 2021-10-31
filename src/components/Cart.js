@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { useCart } from "react-use-cart";
 import Delete from "../icons/delete.svg";
 import Coupon from "./Coupon.js";
-import { useState } from "react";
 
 function Cart(props) {
   const {
@@ -57,7 +56,7 @@ function Cart(props) {
                       updateItemQuantity(item.id, item.quantity + 1)
                     }
                   >
-                    <p>+</p>
+                    <p className="plus">+</p>
                   </button>
                 </td>
                 <td>

@@ -246,13 +246,14 @@ p.discount {
   }
 
   .total-price {
+    margin-right: 16px;
     
   }
 
   .btn-position {
     position: absolute;
     right: 0px;
-    margin: 0px 40px 0px 0px;
+    margin: 0px 16px 0px 0px;
     bottom: 40px;
     
   }
@@ -263,5 +264,11 @@ p.discount {
     margin-bottom: 0px;
     padding-bottom: 24px;
   }
+
+  .plus {
+    position: relative;
+    bottom: 2px;
+  }
+  
   
 }
