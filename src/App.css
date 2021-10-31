@@ -223,3 +223,45 @@ a.black {
 p.discount {
   color: red;
 }
+
+@media (max-width: 576px) {
+  .empty-state {
+    margin-bottom: 40px;
+    margin-top: 64px;
+  }
+
+  .cart {
+    padding: 16px;
+    position: relative;
+    bottom: 0px;
+    min-height: 480px;
+  }
+
+  .img-small {
+    display: none;
+  }
+
+  .coupon {
+    flex-direction: column;
+  }
+
+  .total-price {
+    
+  }
+
+  .btn-position {
+    position: absolute;
+    right: 0px;
+    margin: 0px 40px 0px 0px;
+    bottom: 40px;
+    
+  }
+
+  form.form, .final-items {
+    width: auto;
+    padding: 16px;
+    margin-bottom: 0px;
+    padding-bottom: 24px;
+  }
+  
+}
