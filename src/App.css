@@ -102,7 +102,7 @@ button.btn-quantity {
 .btn-position {
   position: absolute;
   right: 0px;
-  margin: 40px 40px;
+  margin: 64px 40px;
 }
 .total-price {
   text-align: right;
