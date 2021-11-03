@@ -41,7 +41,7 @@ function Info(props) {
       <label>E-mail:</label>
       <input type="email" value={email} onChange={handleEmail} placeholder="Enter your e-mail" required></input>
       <label>Credit Card:</label>
-      <input type="tel" value={creditCard} onChange={handleCreditCard} placeholder="Enter your credit card number" maxLength="16" required></input>
+      <input type="number" value={creditCard} onChange={handleCreditCard} placeholder="Enter your credit card number" maxLength="16" required></input>
       <label>Address:</label>
       <input type="text" value={address} onChange={handleAddress} placeholder="Enter your address" required></input>
       <button type="submit" className="btn btn-primary btn-submit">Confirm</button>
