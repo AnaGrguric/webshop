@@ -13,7 +13,51 @@ function Cart(props) {
     updateItemQuantity,
     removeItem,
     emptyCart,
+    updateItem,
+    getItem,
   } = useCart();
+
+  const motionSensor = getItem(2);
+  console.log(motionSensor);
+
+  /*  const filteredItems =
+    items.filter(item => {
+      if(motionSensor.quantity === 3){
+        updateItem(2, {itemTotal: 65})
+        return item
+      } else {
+        return item
+      }
+    })
+ */
+
+  /* if(isEmpty === false){
+  const qnt = () => {switch(motionSensor){
+    case motionSensor.quantity === 3:  {
+      updateItem(2, { itemTotal: 65 });
+    };
+    default: break;
+    break;
+  }}
+
+  qnt();
+} */
+
+  /* const updated = items.map(item => {
+  if (motionSensor.quantity === 3) {
+    updateItem(2, { totalPrice: 65 });
+  } return item
+}) */
+
+  /* const updateQnt = () => {
+    items.filter((item) => {
+      if ((item.id === 2) & (item.quantity === 3)) {
+        return quantityDischarge();
+      }
+    });
+  };
+
+  updateQnt(); */
 
   if (isEmpty) return <p className="row empty-state">Your cart is empty</p>;
 
@@ -58,6 +102,9 @@ function Cart(props) {
                   >
                     <p className="plus">+</p>
                   </button>
+                </td>
+                <td>
+                  <p>{item.itemTotal} EUR</p>
                 </td>
                 <td>
                   <img
