@@ -10,6 +10,7 @@ function Coupon(props) {
   const handlePromoCode = (e) => {
     setPromoCode(e.target.value);
   };
+  console.log(promoCode)
 
   const applyPromoCode = (e) => {
     e.preventDefault();
@@ -57,7 +58,7 @@ function Coupon(props) {
           Apply
         </button>
       </div>
-      {open && <DisplayDiscount discount={discount} totalPrice={props.totalPrice} />}
+      {open && <DisplayDiscount discount={discount} totalPrice={props.totalPrice} coupon={promoCode}/>}
     </form>
   );
 }
